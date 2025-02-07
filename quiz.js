@@ -35,10 +35,10 @@ start.addEventListener(
       let date = (new Date() - now) / 1000;
       let min = Math.floor(date / 60);
       let sec = parseInt(date % 60);
-      if (min >= 10) {
+      if (min >= 10 || i == amount) {
         clearInterval(timer);
         error.innerHTML = `Exam is over you give ${correct_answer} correct answer`;
-        setTimeout(() => clear.click(), 3000);
+        setTimeout(() => clear.click(), 5000);
 
         return;
       }
