@@ -11,7 +11,7 @@ let range2 = document.getElementById("range2");
 
 const start = document.querySelector(".start");
 const time = document.getElementById("time");
-
+next.style.pointerEvents = "none";
 clear.addEventListener(
   "click",
   () => {
@@ -30,7 +30,7 @@ start.addEventListener(
   "click",
   () => {
     start.style.display = "none";
-
+    next.style.pointerEvents = "auto";
     display_Ans();
     let now = new Date();
     let timer = setInterval(() => {
