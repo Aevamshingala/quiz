@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .leaf {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    border: 2px solid;
+    border-radius: 10px 80px 10px 80px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    padding: 5px;
+    -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    -webkit-mask-composite: xor;
+    transform-origin: 50% 50%;
+  }
+
+
+  .leaf:nth-child(1) {
+    transform: rotate(0deg) translateY(-60px);
+  }
+
+  .leaf:nth-child(2) {
+    transform: rotate(45deg) translateY(-60px);
+  }
+
+  .leaf:nth-child(3) {
+    transform: rotate(90deg) translateY(-60px);
+  }
+
+  .leaf:nth-child(4) {
+    transform: rotate(135deg) translateY(-60px);
+  }
+
+  .leaf:nth-child(5) {
+    transform: rotate(180deg) translateY(-60px);
+  }
+
+  .leaf:nth-child(6) {
+    transform: rotate(225deg) translateY(-60px);
+  }
+
+  .leaf:nth-child(7) {
+    transform: rotate(270deg) translateY(-60px);
+  }
+
+  .leaf:nth-child(8) {
+    transform: rotate(315deg) translateY(-60px);
+  }
+
+  body {
+    background-color: black;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .main2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 300px;
+    width: 200px;
+    height: 200px;
+    animation: rotate 3s linear infinite;
+  }
+</style>
+
+<body>
+  <div class="main2">
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+  </div>
+</body>
+
+</html>

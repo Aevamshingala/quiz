@@ -7,6 +7,8 @@ const clear = document.querySelector(".clear");
 const next = document.querySelector(".next");
 const error = document.getElementById("error");
 let range = document.getElementById("range");
+let range2 = document.getElementById("range2");
+
 const start = document.querySelector(".start");
 const time = document.getElementById("time");
 
@@ -86,6 +88,8 @@ function questionSelect() {
   }
 }
 let correct_answer = 0;
+let wrong_answer = 0;
+
 const userdata = localStorage.getItem("userChoice");
 const { amount, category, difficulty } = JSON.parse(userdata);
 function display_Ans() {
@@ -119,11 +123,14 @@ function display_Ans() {
             correct_answer++;
           } else {
             op.classList.add("bg-danger");
+            wrong_answer++;
           }
         } catch (error) {
           console.log(error);
         } finally {
           range.value = (correct_answer / amount) * 100;
+          range2.value = (wrong_answer / amount) * 100;
+
         }
       },
       { once: true }

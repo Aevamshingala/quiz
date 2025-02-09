@@ -9,40 +9,81 @@
 <link rel="stylesheet" href="./style.css">
 
   <style>
+    body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("images/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    }
+    .main{
+      backdrop-filter: blur(3px);
+      animation: boxi 3s infinite ease-in-out alternate;
+}
+
+@keyframes boxi {
+  from {
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 50px 50px rgba(16, 121, 137, 0);
+  }
+  to {
+    border-radius: 80px 20px 80px 20px;
+    box-shadow: 0px 0px 10px 10px rgba(13, 186, 213, 1);
+  }
+}
+
     .box {
       margin: 20px;
       padding: 20px;
       width: 40vw;
-      height: 70vh;
-      -webkit-box-shadow: inset -8px -9px 11.5px -2.5px #dddddd;
-      -moz-box-shadow: inset -8px -9px 11.5px -2.5px #dddddd;
-      box-shadow: inset -8px -9px 11.5px -2.5px #dddddd;
+      height: 70vh;      
+    }
+    label{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: xx-large;
     }
 
     .button {
       width: 10vw;
       height: 8vh;
-      margin-top: 20px;
+      margin-top: 50px;
+      color: white;
+      background-color: #f9a386;
+      border-radius: 10px 80px 10px 80px;
+      transition: background-color 0.3s ease, color 0.5s ease,border-radius 0.3s ease,transform 0.3s ease;
+    }
+    .button:hover{
+      background-color: #c1d2c1;
+      border-radius: 80px 10px 80px 10px;
+      color: black
     }
 
     .input {
       width: 25vw;
-      border: 2px solidwhite;
+      border: 2px black;
       border-radius: 20px;
       padding: 10px;
+      border-radius: 80px 40px 80px 40px;
+      transition: border-radius 0.3s ease,box-shadow 0.5s ease ;      
+    }
+    
+    .input:focus{
+      border-radius: 80px 10px 80px 10px;
+      box-shadow:0px 0px 10px 10px rgb(13, 186, 213);
     }
     
   </style>
 </head>
 
-<body class="bg-dark backg">
+<body class="bg-dark">
+  <div>
   <div class="d-flex justify-content-center align-items-center ">
-    <div class="border border-white box d-flex justify-content-center align-items-center ">
+    <div class="border border-white box d-flex justify-content-center align-items-center main ">
       <form id="form">
-        <label for="amount">Enter question Amount</label><br>
-        <input type="number" class="input" max="50" id="number" oninput="myinput()"><br>
+        <label for="amount" class="text-black">Enter question Amount</label><br>
+        <input type="number" class="input" max="50" id="number" onfocus="myinput()"><br>
         <label for="select">Choose difficulty level</label><br>
-        <select id="select" class="input" required oninput="myinput()">
+        <select id="select" class="input" required onfocus="myinput()">
           <option selected disabled>Not Choose</option>
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
@@ -50,7 +91,9 @@
         </select>
         <br>
         <div class="d-flex justify-content-center">
-          <button type="submit" class="bg-primary text-white rounded p-2 fs-4 button">Submit</button><br>
+          <button type="submit" class="p-2 fs-3 button">
+            Submit
+          </button><br>
         </div>
         <div class="d-flex justify-content-center">
           <p id="error" class="fs-2 text-danger"></p>
@@ -58,13 +101,14 @@
       </form>
     </div>
   </div>
+  </div>
 </body>
 
 <script>
   const label = document.getElementsByTagName('label')
 
   for (let i = 0; i < label.length; i++) {
-    label[i].className = "text-white m-4 fs-2"
+    label[i].className = "m-4 fs-2"
   }
   const error = document.querySelector('#error');
   function myinput() {
@@ -94,7 +138,7 @@
     }
     localStorage.setItem("userChoice", JSON.stringify({ amount: input, category: params, difficulty: select }))
 
-    window.location.href = "quiz.html"
+    window.location.href = "backup.html"
   })
 
 
