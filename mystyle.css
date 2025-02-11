@@ -1,0 +1,407 @@
+body {
+  height: 110vh;
+  background-image: linear-gradient(180deg, #aab0c9, #6a849e, #56758f, #42627b);
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.innone {
+  width: 60vw;
+  background-color: #cfcfea;
+  min-height: 100vh;
+  border-radius: 20px 0px 0px 20px;
+  position: relative;
+  float: left;
+}
+
+.inntwo {
+  position: relative;
+  width: 15vw;
+  min-height: 100vh;
+  background-color: #002138;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.iconimg {
+  width: 20%;
+  background-color: #cfcfea;
+  border-radius: 50%;
+  border: 2px solid #cfcfea;
+  margin: 15px;
+}
+
+h1 {
+  color: #002138;
+  margin: 5px;
+  margin-top: 30px;
+}
+
+.quealign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ques {
+  width: 80%;
+  height: 25vh;
+  border-radius: 20px;
+  background-color: #002138;
+  overflow-y: scroll;
+  scrollbar-color: #002138 #ffffff;
+  scrollbar-width: none;
+}
+
+.op {
+  border: 2px solid #002138;
+  text-align: center;
+  /* padding: 10px; */
+  width: 50px;
+  margin-right: 5px;
+  margin-top: 20px;
+  border-radius: 50%;
+  font-family: "Passero One", serif;
+  font-weight: 900;
+  font-size: xx-large;
+  font-style: normal;
+  background-color: #f2f2f2;
+}
+
+#error {
+  font-family: "Eater", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(208, 62, 62, 0.778);
+  font-size: xx-large;
+}
+
+.playball-regular {
+  font-family: "Playball", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5vw;
+}
+
+.dothing {
+  width: 10vw;
+  margin: 15px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-family: "Playball", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  background-color: #002138;
+  color: #f2f2f2;
+}
+
+.next {
+  width: 10vw;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-family: "Playball", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  background-color: #cfcfea;
+  color: #002138;
+}
+
+.option {
+  border: 2px solid #002138;
+  font-size: xx-large;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: auto;
+  background-color: #4959ed;
+  color: #ffffff;
+  width: 30vw;
+}
+
+h3 {
+  margin: 4px;
+  padding: 20px;
+  color: #ffffff;
+  word-spacing: 4px;
+  font-size: x-large;
+  /* word-break: keep-all; */
+}
+
+.per {
+  margin-top: 10%;
+}
+
+.tf {
+  color: #f2f2f2;
+  font-size: x-large;
+  margin: 4px;
+  font-family: "Playball", serif;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Default styles apply for larger screens */
+
+/* Tablets and small laptops (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .box {
+    width: 60vw;
+    height: 60vh;
+  }
+  .input {
+    width: 50vw;
+  }
+  .button {
+    width: 15vw;
+    height: 7vh;
+  }
+  .dothing,
+  .next {
+    width: 15vw;
+    font-size: large;
+  }
+  .option {
+    width: 40vw;
+    font-size: large;
+  }
+}
+
+/* Large smartphones and small tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .box {
+    width: 80vw;
+    height: 55vh;
+  }
+  .input {
+    width: 60vw;
+  }
+  .button {
+    width: 20vw;
+    height: 6vh;
+  }
+  .dothing,
+  .next {
+    width: 20vw;
+    font-size: medium;
+  }
+  .option {
+    width: 50vw;
+    font-size: medium;
+  }
+}
+
+/* Smartphones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .box {
+    width: 90vw;
+    height: 50vh;
+    padding: 10px;
+  }
+  label {
+    font-size: large;
+  }
+  .input {
+    width: 75vw;
+  }
+  .button {
+    width: 30vw;
+    height: 5vh;
+    font-size: small;
+  }
+  .dothing,
+  .next {
+    width: 30vw;
+    font-size: small;
+  }
+  .option {
+    width: 60vw;
+    font-size: small;
+  }
+}
+
+.leaf {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  border: 2px solid;
+  border-radius: 10px 80px 10px 80px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  padding: 5px;
+  -webkit-mask: linear-gradient(white 0 0) content-box,
+    linear-gradient(white 0 0);
+  -webkit-mask-composite: xor;
+  transform-origin: 50% 50%;
+}
+
+.leaf:nth-child(1) {
+  transform: rotate(0deg) translateY(-40px);
+}
+
+.leaf:nth-child(2) {
+  transform: rotate(45deg) translateY(-40px);
+}
+
+.leaf:nth-child(3) {
+  transform: rotate(90deg) translateY(-40px);
+}
+
+.leaf:nth-child(4) {
+  transform: rotate(135deg) translateY(-40px);
+}
+
+.leaf:nth-child(5) {
+  transform: rotate(180deg) translateY(-40px);
+}
+
+.leaf:nth-child(6) {
+  transform: rotate(225deg) translateY(-40px);
+}
+
+.leaf:nth-child(7) {
+  transform: rotate(270deg) translateY(-40px);
+}
+
+.leaf:nth-child(8) {
+  transform: rotate(315deg) translateY(-40px);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 65px;
+  width: 100px;
+  height: 100px;
+  animation: rotate 3s linear infinite;
+}
+/* Default styles apply for larger screens */
+
+/* Tablets and small laptops (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .box {
+    width: 60vw;
+    height: 60vh;
+  }
+  .input {
+    width: 50vw;
+  }
+  .button {
+    width: 15vw;
+    height: 7vh;
+  }
+  .dothing,
+  .next {
+    width: 15vw;
+    font-size: large;
+  }
+  .option {
+    width: 40vw;
+    font-size: large;
+  }
+  .inntwo {
+    width: 20vw;
+  }
+  .iconimg {
+    width: 25%;
+  }
+  .clock {
+    font-size: 1.5em;
+  }
+}
+
+/* Large smartphones and small tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .box {
+    width: 80vw;
+    height: 55vh;
+  }
+  .input {
+    width: 60vw;
+  }
+  .button {
+    width: 20vw;
+    height: 6vh;
+  }
+  .dothing,
+  .next {
+    width: 20vw;
+    font-size: medium;
+  }
+  .option {
+    width: 50vw;
+    font-size: medium;
+  }
+  .inntwo {
+    width: 25vw;
+  }
+  .iconimg {
+    width: 30%;
+  }
+  .clock {
+    font-size: 1.2em;
+  }
+}
+
+/* Smartphones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .box {
+    width: 90vw;
+    height: 50vh;
+    padding: 10px;
+  }
+  label {
+    font-size: large;
+  }
+  .input {
+    width: 75vw;
+  }
+  .button {
+    width: 30vw;
+    height: 5vh;
+    font-size: small;
+  }
+  .dothing,
+  .next {
+    width: 30vw;
+    font-size: small;
+  }
+  .option {
+    width: 60vw;
+    font-size: small;
+  }
+  .inntwo {
+    width: 30vw;
+  }
+  .iconimg {
+    width: 35%;
+  }
+  .clock {
+    font-size: 1em;
+  }
+}

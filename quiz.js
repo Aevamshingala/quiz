@@ -8,6 +8,7 @@ let range = document.getElementById("range");
 let range2 = document.getElementById("range2");
 const start = document.querySelector(".start");
 const time = document.getElementById("time");
+const iconimg = document.querySelector(".iconimg");
 // <<<<------------------------------------------------
 
 // ----------------style--------------------------->>>>
@@ -56,6 +57,7 @@ next.addEventListener("click", () => {
 });
 
 start.addEventListener("mouseover", call, { once: true });
+
 // <<<<--------------------------------------------------------
 
 // ---------------------functions----------------------------->>>>
