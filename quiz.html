@@ -81,6 +81,26 @@
 
   </div>
 </body>
-<script src="./quiz.js"></script>
+<script>
+  if (!localStorage.getItem("time")) {
+    localStorage.setItem("time", JSON.stringify(new Date()));
+  }
+
+  let now = new Date(JSON.parse(localStorage.getItem("time"))); // Properly parse stored time
+  console.log(now);
+  console.log(typeof now);
+
+  let timer = setInterval(() => {
+    let elapsedSeconds = (new Date() - now) / 1000; // Get elapsed seconds
+    let min = Math.floor(elapsedSeconds / 60);
+    let sec = Math.floor(elapsedSeconds % 60);
+
+    console.log(`Elapsed time: ${min} minutes, ${sec} seconds`);
+
+    // Don't update localStorage inside the interval
+  }, 1000);
+
+
+</script>
 
 </html>

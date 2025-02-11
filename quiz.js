@@ -86,8 +86,12 @@ function startt() {
       // <<<<---------------------------------------
 
       // --------------DATE--------------------->>>>
-      let now = new Date();
       // take the current date and then in setinterval it take Date every second and make a timer after time over exam will be over
+
+      if (!localStorage.getItem("time")) {
+        localStorage.setItem("time", JSON.stringify(new Date()));
+      }
+      let now = new Date(JSON.parse(localStorage.getItem("time")));
       let timer = setInterval(() => {
         let date = (new Date() - now) / 1000;
         let min = Math.floor(date / 60);
@@ -96,7 +100,6 @@ function startt() {
           clearInterval(timer);
           error.innerHTML = `Exam is over you give ${correct_answer} correct answer`;
           setTimeout(() => clear.click(), 5000);
-
           return;
         }
         // padstart is use when i need more then 1 value so i give 2 if more then 1 value not exist then it add '0' at first
