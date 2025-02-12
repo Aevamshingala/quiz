@@ -1,6 +1,7 @@
 body {
   height: 110vh;
   background-image: linear-gradient(180deg, #aab0c9, #6a849e, #56758f, #42627b);
+  /* background-image: url("./images/new\ background.jpg"); */
 }
 
 .outer {
